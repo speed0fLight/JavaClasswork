@@ -7,7 +7,7 @@ public class FileAndOutput {
         first name to the file, and then closes the file.*/
 
         // Open a file
-        String fileName = "[[REDACTED]]";
+        String fileName = "C:\\Users\\justi\\IdeaProjects\\JavaClasswork\\src\\MyName.txt";
         File file = new File(fileName);
 
         // Write the name to the file
