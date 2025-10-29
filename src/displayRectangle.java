@@ -1,4 +1,3 @@
-// Using a more descriptive package name
 import javax.swing.JOptionPane;
 
 /**
@@ -21,25 +20,32 @@ public class displayRectangle {
             double length = Double.parseDouble(lengthString);
             double width = Double.parseDouble(widthString);
 
-            // Input validation
-            if (length > 0.0 && width > 0.0) {
-
-                // Calculate the area
-                double area = length * width;
-
-                // output string for the results
-                String output = "Program by Justin N\n\nRectangle Details:\n------------------------\n"
-                        + String.format("Length: \f%.2f\n", length)
-                        + String.format("Width:  \f%.2f\n", width)
-                        + String.format("Area:   \f%.2f\n", area);
-
-                // Display the results
-                JOptionPane.showMessageDialog(null, output);
-            } else {
-                // handle any issues
-                JOptionPane.showMessageDialog(null, "Length and width must both be positive numbers.");
-            }
+            displayRectangle.displayRectangleInfo(length, width);
         }
 
+
     }
+
+    private static void displayRectangleInfo(double length, double width) {
+        // Input validation
+        if (length > 0.0 && width > 0.0) {
+
+            // Calculate the area
+            double area = length * width;
+
+            // output string for the results
+            String output = "Program by Justin N\n\nRectangle Details:\n------------------------\n"
+                    + String.format("Length: \f%.2f\n", length)
+                    + String.format("Width:  \f%.2f\n", width)
+                    + String.format("Area:   \f%.2f\n", area);
+
+            // Display the results
+            JOptionPane.showMessageDialog(null, output);
+        } else {
+            // handle any issues
+            JOptionPane.showMessageDialog(null, "Length and width must both be positive numbers.");
+        }
+    }
+
+
 }
